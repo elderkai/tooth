@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>招商信诺智爱牙</title>
+    <link rel="stylesheet" href="./lib/vant@2.11.2/index.css">
+    <link rel="stylesheet/less" type="text/css" href="./public/css/public.less" />
+    <link rel="stylesheet/less" type="text/css" href="./public/css/home.less" />
+    <script src="./lib/less-3.11.1.min.js"></script>
+</head>
+
+<body>
+    <div id="vue">
+        <div class="zay_header">
+            <div class="iconBack_box">
+                <img class="icon_back" src="./public/imgs/28.png" alt="">
+            </div>
+            <p>招商信诺智爱牙</p>
+        </div>
+        <div class="checkedPeople">
+            <div class="btn_left">
+                <div @click="choisePeople(1)" :class="people==1?'btn_item active':'btn_item'">本人</div>
+                <div @click="choisePeople(2)" :class="people==2?'btn_item active':'btn_item'">父母</div>
+            </div>
+            <div class="total">
+                有效保单：3份
+            </div>
+        </div>
+        <div v-if="people==1" class="policy_item">
+            <div class="policy_header">
+                <p class="text_id">保单编号：P000043537384</p>
+                <div class="name">
+                    <p class="text_policy">招商信诺智爱牙医疗保险</p>
+                    <div class="btn_showDetail">查看详情</div>
+                </div>
+                <p class="text_Name">被保险人：王礼</p>
+                <img class="icon_policy" src="./public/imgs/18.png" width="128" height="132" alt="">
+            </div>
+            <div class="policy_body">
+                <div class="body_head">
+                    <div class="policy_name">保障分类</div>
+                    <div class="right">
+
+                        剩余额度
+                        <span>
+                            /总额度（元）
+                        </span>
+                    </div>
+                </div>
+                <div class="categoryItem">
+                    <div class="name">预防保健齿科治疗</div>
+
+                    <div class="progress">
+                        <span></span>
+                    </div>
+                    <div class="numScale">2,000<span>/2,000</span></div>
+                </div>
+                <div class="categoryItem">
+                    <div class="name">基础齿科治疗</div>
+                    <div class="progress"> <span></span></div>
+                    <div class="numScale">400<span>/400</span></div>
+                </div>
+                <div class="categoryItem">
+                    <div class="name">复杂齿科治疗</div>
+                    <div class="progress"> <span></span></div>
+                    <div class="numScale">800<span>/800</span></div>
+                </div>
+                <div class="categoryItem">
+                    <div class="name">意外齿科治疗</div>
+                    <div class="progress"> <span></span></div>
+                    <div class="numScale">1,200<span>/1,200</span></div>
+                </div>
+                <div class="categoryItem">
+                    <div class="name">矫正齿科治疗</div>
+                    <div class="progress"> <span></span></div>
+                    <div class="numScale">1,200<span>/1,200</span></div>
+                </div>
+
+            </div>
+        </div>
+        <!-- <div class="swipe_box">
+            <van-swipe v-if="people==2" @change="onChange">
+                <van-swipe-item>
+                    <div class="policy_item">
+                        <div class="policy_header">
+                            <p class="text_id">保单编号：P000043537384</p>
+                            <div class="name">
+                                <p class="text_policy">招商信诺智爱牙医疗保险</p>
+                                <div class="btn_showDetail">查看详情</div>
+                            </div>
+                            <p class="text_Name">被保险人：王淡节</p>
+                            <img class="icon_policy" src="./public/imgs/18.png" width="128" height="132" alt="">
+                        </div>
+                        <div class="policy_body">
+                            <div class="body_head">
+                                <div class="policy_name">保障分类</div>
+                                <div class="right">
+
+                                    剩余额度
+                                    <span>
+                                        /总额度（元）
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="categoryItem">
+                                <div class="name">预防保健齿科治疗</div>
+
+                                <div class="progress">
+                                    <span></span>
+                                </div>
+                                <div class="numScale">2,000<span>/2,000</span></div>
+                            </div>
+                            <div class="categoryItem">
+                                <div class="name">基础齿科治疗</div>
+                                <div class="progress"> <span></span></div>
+                                <div class="numScale">400<span>/400</span></div>
+                            </div>
+                            <div class="categoryItem">
+                                <div class="name">复杂齿科治疗</div>
+                                <div class="progress"> <span></span></div>
+                                <div class="numScale">800<span>/800</span></div>
+                            </div>
+                            <div class="categoryItem">
+                                <div class="name">意外齿科治疗</div>
+                                <div class="progress"> <span></span></div>
+                                <div class="numScale">1,200<span>/1,200</span></div>
+                            </div>
+                            <div class="categoryItem">
+                                <div class="name">矫正齿科治疗</div>
+                                <div class="progress"> <span></span></div>
+                                <div class="numScale">1,200<span>/1,200</span></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </van-swipe-item>
+                <van-swipe-item>
+                    <div class="policy_item">
+                        <div class="policy_header">
+                            <p class="text_id">保单编号：P000043537384</p>
+                            <div class="name">
+                                <p class="text_policy">招商信诺智爱牙医疗保险</p>
+                                <div class="btn_showDetail">查看详情</div>
+                            </div>
+                            <p class="text_Name">被保险人：胡菲</p>
+                            <img class="icon_policy" src="./public/imgs/18.png" width="128" height="132" alt="">
+                        </div>
+                        <div class="policy_body">
+                            <div class="body_head">
+                                <div class="policy_name">保障分类</div>
+                                <div class="right">
+
+                                    剩余额度
+                                    <span>
+                                        /总额度（元）
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="categoryItem">
+                                <div class="name">预防保健齿科治疗</div>
+
+                                <div class="progress">
+                                    <span></span>
+                                </div>
+                                <div class="numScale">2,000<span>/2,000</span></div>
+                            </div>
+                            <div class="categoryItem">
+                                <div class="name">基础齿科治疗</div>
+                                <div class="progress"> <span></span></div>
+                                <div class="numScale">400<span>/400</span></div>
+                            </div>
+                            <div class="categoryItem">
+                                <div class="name">复杂齿科治疗</div>
+                                <div class="progress"> <span></span></div>
+                                <div class="numScale">800<span>/800</span></div>
+                            </div>
+                            <div class="categoryItem">
+                                <div class="name">意外齿科治疗</div>
+                                <div class="progress"> <span></span></div>
+                                <div class="numScale">1,200<span>/1,200</span></div>
+                            </div>
+                            <div class="categoryItem">
+                                <div class="name">矫正齿科治疗</div>
+                                <div class="progress"> <span></span></div>
+                                <div class="numScale">1,200<span>/1,200</span></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </van-swipe-item>
+            </van-swipe>
+        </div> -->
+        <div id="wrap" v-if="people==2" class="swiperBox">
+            <div   class="swiperItem">
+                <div @click="onChange(1)" class="policy_item">
+                    <div class="policy_header">
+                        <p class="text_id">保单编号：P000043537384</p>
+                        <div class="name">
+                            <p class="text_policy">招商信诺智爱牙医疗保险</p>
+                            <div class="btn_showDetail">查看详情</div>
+                        </div>
+                        <p class="text_Name">被保险人：王淡节</p>
+                        <img class="icon_policy" src="./public/imgs/18.png" width="128" height="132" alt="">
+                    </div>
+                    <div class="policy_body">
+                        <div class="body_head">
+                            <div class="policy_name">保障分类</div>
+                            <div class="right">
+
+                                剩余额度
+                                <span>
+                                    /总额度（元）
+                                </span>
+                            </div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="name">预防保健齿科治疗</div>
+
+                            <div class="progress">
+                                <span></span>
+                            </div>
+                            <div class="numScale">2,000<span>/2,000</span></div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="name">基础齿科治疗</div>
+                            <div class="progress"> <span></span></div>
+                            <div class="numScale">400<span>/400</span></div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="name">复杂齿科治疗</div>
+                            <div class="progress"> <span></span></div>
+                            <div class="numScale">800<span>/800</span></div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="name">意外齿科治疗</div>
+                            <div class="progress"> <span></span></div>
+                            <div class="numScale">1,200<span>/1,200</span></div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="name">矫正齿科治疗</div>
+                            <div class="progress"> <span></span></div>
+                            <div class="numScale">1,200<span>/1,200</span></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div @click="onChange(2)" class="policy_item">
+                    <div class="policy_header">
+                        <p class="text_id">保单编号：P000043537384</p>
+                        <div class="name">
+                            <p class="text_policy">招商信诺智爱牙医疗保险</p>
+                            <div class="btn_showDetail">查看详情</div>
+                        </div>
+                        <p class="text_Name">被保险人：胡菲</p>
+                        <img class="icon_policy" src="./public/imgs/18.png" width="128" height="132" alt="">
+                    </div>
+                    <div class="policy_body">
+                        <div class="body_head">
+                            <div class="policy_name">保障分类</div>
+                            <div class="right">
+
+                                剩余额度
+                                <span>
+                                    /总额度（元）
+                                </span>
+                            </div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="name">预防保健齿科治疗</div>
+
+                            <div class="progress">
+                                <span></span>
+                            </div>
+                            <div class="numScale">2,000<span>/2,000</span></div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="name">基础齿科治疗</div>
+                            <div class="progress"> <span></span></div>
+                            <div class="numScale">400<span>/400</span></div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="name">复杂齿科治疗</div>
+                            <div class="progress"> <span></span></div>
+                            <div class="numScale">800<span>/800</span></div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="name">意外齿科治疗</div>
+                            <div class="progress"> <span></span></div>
+                            <div class="numScale">1,200<span>/1,200</span></div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="name">矫正齿科治疗</div>
+                            <div class="progress"> <span></span></div>
+                            <div class="numScale">1,200<span>/1,200</span></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="choiseHospital">
+            <div class="btn_choise">请选择您的定点医院
+                <van-icon size="18" name="arrow" color="#C2C2C2" />
+            </div>
+            <div class="title_time">预约就医时间</div>
+            <div class="selectTime1">
+                <div @click="selectTime" class="selectTime">
+                    <div class="time">{{date[0]}}</div>
+                    <van-icon size="18" name="arrow-down" color="#C2C2C2" />
+                </div>
+                <div @click="selectTime" class="selectTime">
+                    <div class="time">{{date[1]}}</div>
+                    <van-icon size="18" name="arrow-down" color="#C2C2C2" />
+                </div>
+            </div>
+            <div class="btn_yyue">预约</div>
+        </div>
+        <div class="btn_bottom">
+            <div class="btn_item">
+
+                <img width="37" height="35" src="./public/imgs/103.png" />
+                预约记录</div>
+            <div class="btn_item">
+                <img src="./public/imgs/36.png" width="34" height="35" alt="">
+                就诊记录</div>
+        </div>
+        <van-popup v-model="show" position="bottom" :style="{ height: '30%' }">
+            <van-datetime-picker v-model="currentDate" type="date" title="选择年月日" :min-date="minDate"
+                :max-date="maxDate" />
+        </van-popup>
+        <div style="width: 100%;height:120px;"></div>
+        <van-tabbar @change="changePage" v-model="active" active-color="#051123" inactive-color="#999999">
+            <van-tabbar-item badge="">
+                <span>首页</span>
+                <template #icon="props">
+                    <img :src="props.active ? icon[0].active : icon[0].inactive" />
+                </template>
+            </van-tabbar-item>
+            <van-tabbar-item badge="">
+                <span>就医</span>
+                <template #icon="props">
+                    <img :src="props.active ? icon[1].active : icon[1].inactive" />
+                </template>
+            </van-tabbar-item>
+            <van-tabbar-item badge="">
+                <span>我的</span>
+                <template #icon="props">
+                    <img :src="props.active ? icon[2].active : icon[2].inactive" />
+                </template>
+            </van-tabbar-item>
+
+        </van-tabbar>
+    </div>
+</body>
+<script src="./public/js/public.js"></script>
+<script src="./lib/vue/vue.min.js"></script>
+<script src="./lib/vant@2.11.2/vant.min.js"></script>
+<script>
+    new Vue({
+        el: '#vue',
+        data() {
+            return {
+
+                active: 1,
+                people: 2,
+                show: false,
+                icon: [{
+                        active: './public/imgs/white/45.png',
+                        inactive: './public/imgs/105.png',
+                    },
+                    {
+                        active: './public/imgs/35.png',
+                        inactive: './public/imgs/white/36.png',
+                    },
+                    {
+                        active: './public/imgs/white/46.png',
+                        inactive: './public/imgs/white/37.png',
+                    },
+                ],
+                date: [
+                    '2020-01-01',
+                    '14:00-14:30'
+                ],
+                minDate: new Date(2020, 0, 1),
+                maxDate: new Date(2025, 10, 1),
+                currentDate: new Date(),
+
+            }
+        },
+        mounted() {},
+        methods: {
+            choisePeople(value) {
+                this.people = value
+            },
+            onChange(value) {
+                console.log(value);
+                alert(value)
+            },
+            selectTime() {
+                // this.show=true
+            },
+            changePage(value) {
+                console.log(value);
+                if (value == 0) {
+                    window.location.href = "./home.html"
+                }
+            },
+            checkDivScroolTop(){
+      //获取节点
+      var scrollDiv = document.getElementById('wrap');
+      //绑定事件
+      scrollDiv.addEventListener('scroll', function() {
+        console.log(scrollDiv);
+      });
+    }
+
+
+
+
+        },
+        created() {
+            this.checkDivScroolTop();
+       
+        }
+    });
+</script>
+
+</html>

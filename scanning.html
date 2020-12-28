@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>招商信诺智爱牙</title>
+    <link rel="stylesheet" href="./lib/vant@2.11.2/index.css">
+    <link rel="stylesheet/less" type="text/css" href="./public/css/public.less" />
+    <script src="./lib/less-3.11.1.min.js"></script>
+</head>
+<body>
+    <div id="vue">
+        <div class="zay_header">
+            <div class="iconBack_box">
+                <img class="icon_back" src="./public/imgs/28.png" alt="">
+            </div>
+            <p>招商信诺智爱牙</p>
+        </div>
+        <div class="box_loading">
+            <div class="box_bg">
+                <img src="./public/imgs/111.png" width="450" height="450" alt="">
+                <img class="toRotate searchRotate" src="./public/imgs/110.png" width="450" height="450" alt="">
+                <img  class="searchItem"  src="./public/imgs/112.png" alt="">
+                <img  class="searchItem2"  src="./public/imgs/57.png" alt="">
+            </div>
+        </div>
+        <div class="tipText">
+            <div class="title">设备扫描中...</div>
+            <div class="text">请您尽量将牙刷靠近您的手机</div>
+        </div>
+    </div>
+</body>
+<script src="./public/js/public.js"></script>
+<script src="./lib/vue/vue.min.js"></script>
+<script src="./lib/vant@2.11.2/vant.min.js"></script>
+<script>
+    new Vue({
+        el: '#vue',
+        data() {
+            return {
+              
+            }
+        },
+        mounted() {},
+        methods: {
+            searched(){
+                console.log(this.$refs.tooth);
+                setTimeout(() => {
+                    document.getElementsByClassName("searchItem")[0].className="hadSearched searchItem"
+                }, 3000);
+                setTimeout(() => {
+                    document.getElementsByClassName("searchItem2")[0].className="hadSearched searchItem2"
+                }, 5000);
+                // this.$refs.tooth.style.className="hadSearched searchItem"
+            }    
+        },
+        created(){
+            this.searched()
+        }
+    });
+</script>
+</html>

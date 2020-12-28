@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>招商信诺智爱牙</title>
+    <link rel="stylesheet" href="./lib/vant@2.11.2/index.css">
+    <link rel="stylesheet/less" type="text/css" href="./public/css/public.less" />
+    <link rel="stylesheet/less" type="text/css" href="./public/css/home.less" />
+    <script src="./lib/less-3.11.1.min.js"></script>
+</head>
+<body>
+    <div id="vue">
+        <div class="zay_header">
+            <div class="iconBack_box">
+                <img class="icon_back" src="./public/imgs/28.png" alt="">
+            </div>
+            <p>招商信诺智爱牙</p>
+        </div>
+        <div class="header_bg">
+
+            <div class="text_header">
+                <div class="left">
+                    <div class="text_title">我的家庭保障</div>
+                    <div class="bottom">
+                        <div class="text">1张保单</div>
+                        <div class="btn_see">查看</div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="text_title">设备领取情况</div>
+                    <div class="bottom">
+                        <div class="text">部分未领取</div>
+                        <div class="btn_see">领取</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box_grade">
+            <div class="title">
+                您刷牙评级为
+                <span class="choise_box">
+                    <span v-show="!bind" class="span_choise"></span><span v-show="!bind" class="span_choise"></span>
+                    <span v-show="bind" class="level_style">{{level}}</span>
+                </span>
+                级
+                <img class="icon_geade" src="./public/imgs/64.png" width="36" height="36"  alt="">
+            </div>
+            <div class="choise_box">
+                <div class="choise_item">
+                    <div class="theChoise">A (85-100分)：8折</div>
+                    <div  class="theChoise right">B (70-84分)：85折</div>
+                </div>
+                <div class="choise_item">
+                    <div class="theChoise">C (70分以下)：9折</div>
+                    <div   class="theChoise right">D (60分以下)：95折</div>
+                </div>
+            </div>
+        </div>
+        <div class="center_box">
+            <div class="header_titie">
+                <div class="left"><i :class="bind?'icon_circle active':'icon_circle'"></i>设备{{bind?"已":"未"}}连接</div>
+                    <van-popover
+                    v-model="showPopover"
+                    theme="dark"
+                    trigger="click"
+                    :actions="actions"
+                    @select="select"
+                    >
+                    <template #reference>
+                    <div v-show="bind" @click="bindTooth" ref="iconTooth"  class="right"><i  class="icon_switch"></i>切换设备</div>
+                    </template>
+                    </van-popover>
+                    <div v-show="!bind" @click="bindTooth" ref="iconTooth"  class="right"><i  class="icon_bind"></i>绑定设备</div>
+            </div>
+            <div class="center_tip">
+                <div class="left">右边</div>
+                <div class="right">左边</div>
+            </div>
+            <img @click="clickTooth" class="tooth_item tooth_num1" width="70" height="70" src="./public/imgs/white/32.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num2" width="70" height="70" src="./public/imgs/white/30.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num3" width="70" height="70" src="./public/imgs/white/28.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num4" width="70" height="70" src="./public/imgs/white/26.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num5" width="70" height="70" src="./public/imgs/white/24.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num6" width="70" height="70" src="./public/imgs/white/22.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num7" width="70" height="70" src="./public/imgs/white/20.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num8" width="70" height="70" src="./public/imgs/white/18.png" alt="">
+
+            <img @click="clickTooth" class="tooth_item tooth_num9" width="70" height="70" src="./public/imgs/white/19.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num10" width="70" height="70" src="./public/imgs/white/21.png" alt="">
+            
+            
+            <img @click="clickTooth" class="tooth_item tooth_num16" width="70" height="70" src="./public/imgs/white/33.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num15" width="70" height="70" src="./public/imgs/white/31.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num14" width="70" height="70" src="./public/imgs/white/29.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num13" width="70" height="70" src="./public/imgs/white/27.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num12" width="70" height="70" src="./public/imgs/white/25.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num11" width="70" height="70" src="./public/imgs/white/23.png" alt="">
+
+
+
+            <img @click="clickTooth" class="tooth_item tooth_num17" width="70" height="70" src="./public/imgs/white/16.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num18" width="70" height="70" src="./public/imgs/white/14.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num19" width="70" height="70" src="./public/imgs/white/12.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num20" width="70" height="70" src="./public/imgs/white/10.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num21" width="70" height="70" src="./public/imgs/white/8.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num22" width="70" height="70" src="./public/imgs/white/6.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num23" width="70" height="70" src="./public/imgs/white/4.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num24" width="70" height="70" src="./public/imgs/white/2.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num25" width="70" height="70" src="./public/imgs/white/3.png" alt="">
+
+            
+            <img @click="clickTooth" class="tooth_item tooth_num32" width="70" height="70" src="./public/imgs/white/17.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num31" width="70" height="70" src="./public/imgs/white/15.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num30" width="70" height="70" src="./public/imgs/white/13.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num29" width="70" height="70" src="./public/imgs/white/11.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num28" width="70" height="70" src="./public/imgs/white/9.png" alt="">
+            <img @click="clickTooth" class="tooth_item tooth_num27" width="70" height="70" src="./public/imgs/white/7.png" alt="">
+            
+            <img @click="clickTooth" class="tooth_item tooth_num26" width="70" height="70" src="./public/imgs/white/5.png" alt="">
+
+            <div v-show="toothType==1" class="toothTime">
+                <div  class="useTime">
+                    本次刷牙时间 <span class="huTime">{{huTime}}</span>秒
+                </div>
+                <div class="minTime">可能有牙菌斑 刷牙时间不能 <span class="warnTime">小于20s</span></div>
+            </div>
+            <div v-show="toothType==2" class="angle_tooth">
+                <div class="title">黄色区域</div>
+                <div class="angle_warn">
+                    刷毛和牙齿<span class="angle">未成 45°角，</span>这是牙菌斑 
+                    大量堆积、 <br/>
+                    最脏的区域
+                </div>
+            </div>
+            <div v-show="toothType==3" class="angle_tooth" >
+                <div class="title">黄色区域</div>
+                <div class="angle_warn" style="width: 235px;">
+                    
+                    水平运动幅度超过了
+                    <span class="angle">
+                        3颗牙的宽度，
+                    </span>
+                    <br/>
+                    长期易在牙齿的根部
+                    磨出一排凹槽
+                                                
+                </div>
+            </div>
+            <div class="tooth_time">
+                <span @click="show=true">
+                    <i class="icom_reTime"></i>
+                    {{date}}
+                    <i class="icon_addTime"></i>
+                 </span>
+            </div>
+                <van-calendar v-model="show" :show-confirm="false" @confirm="onConfirm">
+                    </van-calendar>
+                <div class="btn_tabs">
+
+                    <div class="btn_item" @click="changeToothType(1)">
+                            <img v-show="toothType==1" src="./public/imgs/white/39.png" width="80" height="100" alt="">
+                            <img v-show="toothType!=1"  src="./public/imgs/50.png" width="80" height="100" alt="">
+                        <div :class="toothType==1?'text active':'text'">刷牙时长</div>
+                    </div>
+                    <div  @click="changeToothType(2)" class="btn_item ml60">
+                            <img v-show="toothType==2" src="./public/imgs/40.png" width="80" height="100" alt="">
+                            <img v-show="toothType!=2" src="./public/imgs/white/43.png" width="80" height="100" alt="">
+                        <div :class="toothType==2?'text active':'text'">刷牙角度</div>
+                    </div>
+                    <div  @click="changeToothType(3)" class="btn_item ml60">
+                            <img v-show="toothType==3" src="./public/imgs/41.png" width="80" height="100" alt="">
+                            <img  v-show="toothType!=3" src="./public/imgs/white/41.png" width="80" height="100" alt="">
+                        <div :class="toothType==3?'text active':'text'">刷牙幅度</div>
+                    </div>
+                </div>
+                <div v-show="toothType==4" class="toothOne">
+                    <div class="text">牙冠：4秒</div>
+                    <div class="text">外侧：4秒</div>
+                    <div class="text">内侧：5秒</div>
+                </div>
+                <div v-show="toothType==0" class="text_brushTeeth">
+                    
+                   <p>
+                       您今天
+                   </p>
+                   <P>
+                       还没有刷牙哦！
+                   </P>
+                                                
+                </div>
+                <p class="guide_href">
+                    <span>
+                        刷牙指导
+                    </span>
+                </p>
+            </div>
+            <div style="width: 100%;height:120px;"></div>
+            <van-tabbar @change="goPage" v-model="active"  active-color="#051123" inactive-color="#999999">
+                <van-tabbar-item badge="">
+                    <span>首页</span>
+                    <template #icon="props">
+                      <img :src="props.active ? icon[0].active : icon[0].inactive" />
+                    </template>
+                </van-tabbar-item>
+                <van-tabbar-item badge="">
+                    <span>就医</span>
+                    <template #icon="props">
+                      <img :src="props.active ? icon[1].active : icon[1].inactive" />
+                    </template>
+                </van-tabbar-item>
+                <van-tabbar-item badge="">
+                    <span>我的</span>
+                    <template #icon="props">
+                      <img :src="props.active ? icon[2].active : icon[2].inactive" />
+                    </template>
+                </van-tabbar-item>
+            
+              </van-tabbar>
+        </div>
+</body>
+<script src="./public/js/public.js"></script>
+<script src="./lib/vue/vue.min.js"></script>
+<script src="./lib/vant@2.11.2/vant.min.js"></script>
+<script>
+    new Vue({
+        el: '#vue',
+        data() {
+            return {
+                idNum:'',
+                phone:"",
+                vCode:"",
+                show: false,
+                date:"  2020-12-14",
+                minDate: new Date(2010, 0, 1),
+                maxDate: new Date(2010, 0, 31),
+                active:0,
+                bind:false,
+                toothType:0,
+                level:"D",
+                huTime:190,
+                icon: [
+                    {  
+                    active: './public/imgs/white/45.png',
+                    inactive: './public/imgs/105.png',
+                    },
+                    {  
+                    active: './public/imgs/35.png',
+                    inactive: './public/imgs/white/36.png',
+                    },
+                    {  
+                    active: './public/imgs/white/46.png',
+                    inactive: './public/imgs/white/37.png',
+                    },
+                ],
+                showPopover: false,
+                actions: [{ text: '王礼',icon:'./public/imgs/99.png' }, { text: '何雯娜',icon:"" }, { text: '绑定新设备',icon:"" }],
+            }
+        },
+        mounted() {},
+        methods: {
+            clickTooth(event){
+                this.toothType=4
+                let src=[32,30,28,26,24,22,20,18,19,21,33,31,29,27,25,23,16,14,12,10,8,4,6,2,3,17,15,13,11,9,7,5]
+                let tooths=document.getElementsByClassName("tooth_item");
+                for(var i =0;i<tooths.length;i++){
+                tooths[i].src=`./public/imgs/white/${src[i]}.png`
+                tooths[i].style.zIndex=i
+                }
+                let path=event.target.src.replace(/white/g,'red');
+                event.target.src=path
+                // event.target.style.zIndex='9009'
+            },
+            select(value){
+                this.actions.forEach((item,index)=>{
+                    item.icon=""
+                    if(item.text==value.text){
+                        item.icon='./public/imgs/99.png'
+                    }
+                })
+            },
+            goPage(value){console.log(value);
+                if(value==1){
+                    window.location.href="./jyyy.html"
+                }
+            },
+            formatDate(dateData) {
+            var date = new Date(dateData)
+            var y = date.getFullYear()
+            var m = date.getMonth() + 1
+            m = m < 10 ? ('0' + m) : m
+            var d = date.getDate()
+            d = d < 10 ? ('0' + d) : d
+            const time = y + '-' + m + '-' + d
+            return time
+    },
+            onConfirm(date) {
+
+                this.show = false;
+                this.date = this.formatDate(date);
+            },
+            // changeTooth(value){
+            //         let src=[32,30,28,26,24,22,20,18,19,21,23,25,27,29,31,33,16,14,12,10,8,4,6,2,3,5,7,9,11,13,15,17]
+            //         let tooths=document.getElementsByClassName("tooth_item");
+            //         for(var i =0;i<tooths.length;i++){
+            //             if(value==1){
+            //                 tooths[i].src=`./public/imgs/red/${src[i]}.png`
+            //             }else{
+            //                 tooths[i].src=`./public/imgs/yellow/${src[i]}.png`
+            //             }
+            //         }
+            //     // }
+            // },
+            bindTooth(){
+                this.bind=true
+           
+            },
+            changeToothType(type){
+                this.toothType=type
+                if(type==2||type==3){
+                    let src=[32,30,28,26,24,22,20,18,19,21,33,31,29,27,25,23,16,14,12,10,8,4,6,2,3,17,15,13,11,9,7,5]
+                    let tooths=document.getElementsByClassName("tooth_item");
+                    for(var i =9;i<16;i++){
+                            tooths[i].src=`./public/imgs/yellow/${src[i]}.png`
+                }
+            }else{
+                let src=[32,30,28,26,24,22,20,18,19,21,33,31,29,27,25,23,16,14,12,10,8,4,6,2,3,17,15,13,11,9,7,5]
+                    let tooths=document.getElementsByClassName("tooth_item");
+                    for(var i =0;i<tooths.length;i++){
+                            tooths[i].src=`./public/imgs/white/${src[i]}.png`
+                } 
+            }
+            }
+            
+        }
+    });
+</script>
+</html>
