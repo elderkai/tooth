@@ -309,11 +309,11 @@
             <div class="title_time">预约就医时间</div>
             <div class="selectTime1">
                 <div @click="selectTime" class="selectTime">
-                    <div class="time">{{date[0]}}</div>
+                    <div class="time">{{day}}</div>
                     <van-icon size="18" name="arrow-down" color="#C2C2C2" />
                 </div>
                 <div @click="selectTime" class="selectTime">
-                    <div class="time">{{date[1]}}</div>
+                    <div class="time">{{time}}</div>
                     <van-icon size="18" name="arrow-down" color="#C2C2C2" />
                 </div>
             </div>
@@ -381,10 +381,10 @@
                         inactive: './public/imgs/white/37.png',
                     },
                 ],
-                date: [
-                    '2020-01-01',
-                    '14:00-14:30'
-                ],
+                day:'2020-01-01',
+                    time:"14:00-14:30",
+                 
+                 
                 minDate: new Date(2020, 0, 1),
                 maxDate: new Date(2025, 10, 1),
                 currentDate: new Date(),
@@ -397,8 +397,16 @@
                 this.people = value
             },
             onChange(value) {
-                console.log(value);
-                alert(value)
+                let dom = document.getElementsByClassName("swiperItem");
+                let date=this.date;
+                if(value==1){
+                    dom[0].style.left="0";
+                    this.day="2020-01-01"
+                }
+                if(value==2){
+                    dom[0].style.left="-646px";
+                    this.day="2020-12-12"
+                }
             },
             selectTime() {
                 // this.show=true

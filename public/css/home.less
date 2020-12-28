@@ -832,14 +832,15 @@ background: linear-gradient(-7deg, rgba(52, 121, 240, 0.9), rgba(4, 190, 254, 0.
     width:100%;
     height: 570px;
     overflow: hidden;
-    overflow-x: scroll;
+    // overflow-x: scroll;
     .swiperItem{
         width:1396px;
         display: flex;
         justify-content: space-between;
         padding:0 32px;
-        transition: all .1s linear;
-        
+        transition: all .5s linear;
+        position: relative;
+        left:0;
         .policy_item{
            width: 650px;
             margin:0;
