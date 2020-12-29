@@ -219,9 +219,9 @@
                             <div class="name">预防保健齿科治疗</div>
 
                             <div class="progress">
-                                <span></span>
+                                <span :style="ddd"></span>
                             </div>
-                            <div class="numScale">2,000<span>/2,000</span></div>
+                            <div class="numScale">1,000<span>/2,000</span></div>
                         </div>
                         <div class="categoryItem">
                             <div class="name">基础齿科治疗</div>
@@ -373,6 +373,7 @@
                 active: 1,
                 people: 2,
                 show: false,
+                ddd:"width:50%;",
                 icon: [{
                         active: './public/imgs/white/45.png',
                         inactive: './public/imgs/105.png',
