@@ -161,17 +161,20 @@
                     <div class="btn_item" @click="changeToothType(1)">
                             <img v-show="toothType==1" src="./public/imgs/white/39.png" width="80" height="100" alt="">
                             <img v-show="toothType!=1"  src="./public/imgs/50.png" width="80" height="100" alt="">
-                        <div :class="toothType==1?'text active':'text'">刷牙时长</div>
+                        <div :class="toothType==1?'text active':'text'">刷牙
+                          <br/>  时长</div>
                     </div>
                     <div  @click="changeToothType(2)" class="btn_item ml60">
                             <img v-show="toothType==2" src="./public/imgs/40.png" width="80" height="100" alt="">
                             <img v-show="toothType!=2" src="./public/imgs/white/43.png" width="80" height="100" alt="">
-                        <div :class="toothType==2?'text active':'text'">刷牙角度</div>
+                        <div :class="toothType==2?'text active':'text'">刷牙
+                            <br/>角度</div>
                     </div>
                     <div  @click="changeToothType(3)" class="btn_item ml60">
                             <img v-show="toothType==3" src="./public/imgs/41.png" width="80" height="100" alt="">
                             <img  v-show="toothType!=3" src="./public/imgs/white/41.png" width="80" height="100" alt="">
-                        <div :class="toothType==3?'text active':'text'">刷牙幅度</div>
+                        <div :class="toothType==3?'text active':'text'">刷牙
+                            <br/>幅度</div>
                     </div>
                 </div>
                 <div v-show="toothType==4" class="toothOne">
