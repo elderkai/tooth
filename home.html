@@ -23,7 +23,9 @@
                 <div class="left">
                     <div class="text_title">我的家庭保障</div>
                     <div class="bottom">
-                        <div class="text">1张保单</div>
+                        <div class="text">
+                            <span>1</span>
+                            张保单</div>
                         <div class="btn_see">查看</div>
                     </div>
                 </div>
@@ -121,7 +123,7 @@
             
             <img @click="clickTooth" class="tooth_item tooth_num26" width="70" height="70" src="./public/imgs/white/5.png" alt="">
 
-            <div v-show="toothType==1" class="toothTime">
+            <div v-show="toothType==1&&!srTooth" class="toothTime">
                 <div  class="useTime">
                     本次刷牙时间 <span class="huTime">{{huTime}}</span>秒
                 </div>
@@ -179,7 +181,7 @@
                             <br/>幅度</div>
                     </div>
                 </div>
-                <div v-show="toothType==4" class="toothOne">
+                <div v-show="srTooth" class="toothOne">
                     <div class="text">牙冠：4秒</div>
                     <div class="text">外侧：4秒</div>
                     <div class="text">内侧：5秒</div>
@@ -241,6 +243,7 @@
                 maxDate: new Date(2010, 0, 31),
                 active:0,
                 bind:false,
+                srTooth:false,
                 toothType:0,
                 level:"D",
                 huTime:190,
@@ -265,7 +268,8 @@
         mounted() {},
         methods: {
             clickTooth(event){
-                this.toothType=4
+                this.toothType=1
+                this.srTooth=true
                 let src=[32,30,28,26,24,22,20,18,19,21,33,31,29,27,25,23,16,14,12,10,8,6,4,2,3,17,15,13,11,9,7,5]
                 let tooths=document.getElementsByClassName("tooth_item");
                 for(var i =0;i<tooths.length;i++){
@@ -321,6 +325,7 @@
            
             },
             changeToothType(type){
+                this.srTooth=false
                 this.toothType=type
                 let src=[32,30,28,26,24,22,20,18,19,21,33,31,29,27,25,23,16,14,12,10,8,6,4,2,3,17,15,13,11,9,7,5]
                 let tooths=document.getElementsByClassName("tooth_item");
