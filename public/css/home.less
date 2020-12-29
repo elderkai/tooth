@@ -743,15 +743,31 @@ background: linear-gradient(-7deg, rgba(52, 121, 240, 0.9), rgba(4, 190, 254, 0.
         }
     }
 }
+#vue{
+    min-height: 100vh;
+}
 .choiseHospital{
     width: 686px;
-    height: 380px;
+    height: 326px;
     background: #FFFFFF;
     box-shadow: 0px 0px 20px 0px rgba(26, 117, 205, 0.1);
     border-radius: 20px;
     margin:0 auto;
     margin-top: 32px;
     padding:40px 30px;
+    .header_title{
+        display: flex;
+        justify-content: space-between;
+      .left,.right{ 
+        height: 28px;
+        font-size: 28px;
+        font-family: PingFang SC;
+        font-weight: 500;
+        white-space: nowrap;
+        color: #051123;
+        line-height: 28px;}
+      .right{  width: 227px;}
+    }
     .btn_choise{
 
         height: 32px;
@@ -777,22 +793,33 @@ background: linear-gradient(-7deg, rgba(52, 121, 240, 0.9), rgba(4, 190, 254, 0.
         margin-top: 30px;
     }
     .selectTime1{
-        margin-top: 40px;
+        margin-top: 38px;
         display: flex;
         justify-content: space-between;
         .selectTime{
-            width:286px;
+            width:334px;
             border-bottom: 1px solid #C2C2C2;
-            .time{
-                width: 168px;
+            .select{
+                // width: 168px;
                 height: 52px;
-                font-size: 28px;
+                font-size: 32px;
                 font-family: PingFang;
-                font-weight: 500;
+                font-weight: bold;
                 color: #999999;
-                line-height: 28px;
+                line-height: 32px;
                 display: inline-block;
+                white-space: nowrap;
             }
+            .hospital{
+                color: #051123;
+            }
+            .time{
+                font-size:28px;
+                font-weight: 500;
+            }
+        }
+        .sTime{
+            width: 227px;
         }
         .van-icon{
             float: right;

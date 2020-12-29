@@ -303,17 +303,22 @@
 
 
         <div class="choiseHospital">
-            <div class="btn_choise">请选择您的定点医院
+            <!-- <div class="btn_choise">请选择您的定点医院
                 <van-icon size="18" name="arrow" color="#C2C2C2" />
+            </div> -->
+            <div class="header_title">
+                <div class="left">您的定点医院</div>
+                <div class="right">预约就医时间</div>
             </div>
-            <div class="title_time">预约就医时间</div>
+            <!-- <div class="title_time">预约就医时间</div> -->
             <div class="selectTime1">
-                <div @click="selectTime" class="selectTime">
-                    <div class="time">{{day}}</div>
-                    <van-icon size="18" name="arrow-down" color="#C2C2C2" />
+                <div @click="selectHospipal" class="selectTime">
+                    <div v-if="!hospital" class="select">请选择定点医院</div>
+                    <div v-if="hospital" class="select hospital">{{hospital}}</div>
+                    <van-icon v-if="!hospital" size="18" name="arrow" color="#C2C2C2" />
                 </div>
-                <div @click="selectTime" class="selectTime">
-                    <div class="time">{{time}}</div>
+                <div @click="selectTime" class="selectTime sTime">
+                    <div class="select time">{{time}}</div>
                     <van-icon size="18" name="arrow-down" color="#C2C2C2" />
                 </div>
             </div>
@@ -381,9 +386,9 @@
                         inactive: './public/imgs/white/37.png',
                     },
                 ],
-                day: '2020-01-01',
-                time: "14:00-14:30",
-
+                // day: '',
+                time: "2020-01-01",
+                hospital:"",
 
                 minDate: new Date(2020, 0, 1),
                 maxDate: new Date(2025, 10, 1),
@@ -393,6 +398,9 @@
         },
         mounted() {},
         methods: {
+            selectHospipal(){
+                this.hospital='同步齿科（福田店）'
+            },
             choisePeople(value) {
                 this.people = value
             },
@@ -401,11 +409,11 @@
                 let date = this.date;
                 if (value == 1) {
                     dom[0].style.left = "0";
-                    this.day = "2020-01-01"
+                    this.time = "2020-01-01"
                 }
                 if (value == 2) {
                     dom[0].style.left = "-646px";
-                    this.day = "2020-12-12"
+                    this.time = "2020-12-12"
                 }
             },
             selectTime() {
