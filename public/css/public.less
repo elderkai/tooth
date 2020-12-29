@@ -1,4 +1,4 @@
-*{padding:0;margin:0;box-sizing: border-box;font-size: 14px;}
+*{padding:0;margin:0;box-sizing: border-box;font-size: 14px;font-family: PingFang;}
 
 a{text-decoration: none;color:#333;}
 a:hover, a:visited, a:link, a:active {
@@ -260,12 +260,13 @@ margin:32px 32px 54px;
     .van-tabbar-item__text{
         margin-left: 10px;
         font-family: PingFang;
-        font-weight: bold;
+        font-weight: 500;
         // color: #051123;
         span{
             font-size: 24px;
         }
     }
+  
 }
 .box_loading{
     margin:218px auto 0;
@@ -337,5 +338,11 @@ margin:32px 32px 54px;
     color: #999999;
     line-height: 28px;
     margin-top: 32px;
+    }
+}
+.van-tabbar-item--active{
+    .van-tabbar-item__text{
+        font-weight: bold;
+
     }
 }
