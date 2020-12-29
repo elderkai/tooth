@@ -320,15 +320,18 @@
             },
             changeToothType(type){
                 this.toothType=type
+                let src=[32,30,28,26,24,22,20,18,19,21,33,31,29,27,25,23,16,14,12,10,8,4,6,2,3,17,15,13,11,9,7,5]
+                let tooths=document.getElementsByClassName("tooth_item");
+                for(var i =0;i<32;i++){
+                        tooths[i].src=`./public/imgs/white/${src[i]}.png`
+            }
                 if(type==2||type==3){
-                    let src=[32,30,28,26,24,22,20,18,19,21,33,31,29,27,25,23,16,14,12,10,8,4,6,2,3,17,15,13,11,9,7,5]
-                    let tooths=document.getElementsByClassName("tooth_item");
                     for(var i =9;i<16;i++){
                             tooths[i].src=`./public/imgs/yellow/${src[i]}.png`
                 }
             }else{
-                let src=[32,30,28,26,24,22,20,18,19,21,33,31,29,27,25,23,16,14,12,10,8,4,6,2,3,17,15,13,11,9,7,5]
-                    let tooths=document.getElementsByClassName("tooth_item");
+                // let src=[32,30,28,26,24,22,20,18,19,21,33,31,29,27,25,23,16,14,12,10,8,4,6,2,3,17,15,13,11,9,7,5]
+                //     let tooths=document.getElementsByClassName("tooth_item");
                     for(var i =0;i<tooths.length;i++){
                             tooths[i].src=`./public/imgs/white/${src[i]}.png`
                 } 
