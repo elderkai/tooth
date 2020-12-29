@@ -59,7 +59,9 @@
         </div>
         <div class="center_box">
             <div class="header_titie">
-                <div class="left"><i :class="bind?'icon_circle active':'icon_circle'"></i>设备{{bind?"已":"未"}}连接</div>
+                <div class="left"><i :class="bind?'icon_circle active':'icon_circle'"></i>设备{{bind?"已":"未"}}连接
+                    <van-icon v-show="bind" color="#C2C2C2" size="20px"  name="arrow"></i>
+                </div>
                     <van-popover
                     v-model="showPopover"
                     theme="dark"
@@ -198,7 +200,7 @@
                     </span>
                 </p>
             </div>
-            <div style="width: 100%;height:120px;"></div>
+            <div style="width: 100%;height:132px;"></div>
             <van-tabbar @change="goPage" v-model="active"  active-color="#051123" inactive-color="#999999">
                 <van-tabbar-item badge="">
                     <span>首页</span>
@@ -264,7 +266,7 @@
         methods: {
             clickTooth(event){
                 this.toothType=4
-                let src=[32,30,28,26,24,22,20,18,19,21,33,31,29,27,25,23,16,14,12,10,8,4,6,2,3,17,15,13,11,9,7,5]
+                let src=[32,30,28,26,24,22,20,18,19,21,33,31,29,27,25,23,16,14,12,10,8,6,4,2,3,17,15,13,11,9,7,5]
                 let tooths=document.getElementsByClassName("tooth_item");
                 for(var i =0;i<tooths.length;i++){
                 tooths[i].src=`./public/imgs/white/${src[i]}.png`
@@ -320,7 +322,7 @@
             },
             changeToothType(type){
                 this.toothType=type
-                let src=[32,30,28,26,24,22,20,18,19,21,33,31,29,27,25,23,16,14,12,10,8,4,6,2,3,17,15,13,11,9,7,5]
+                let src=[32,30,28,26,24,22,20,18,19,21,33,31,29,27,25,23,16,14,12,10,8,6,4,2,3,17,15,13,11,9,7,5]
                 let tooths=document.getElementsByClassName("tooth_item");
                 for(var i =0;i<32;i++){
                         tooths[i].src=`./public/imgs/white/${src[i]}.png`
