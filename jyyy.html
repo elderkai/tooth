@@ -80,10 +80,10 @@
 
             </div>
         </div>
-        <!-- <div class="swipe_box">
-            <van-swipe v-if="people==2" @change="onChange">
+        <div class="swipe_box">
+            <van-swipe :initial-swipe='0'	 :loop="false" :width="682" v-if="people==2" @change="onChange">
                 <van-swipe-item>
-                    <div class="policy_item">
+                    <div  class="policy_item">
                         <div class="policy_header">
                             <p class="text_id">保单编号：P000043537384</p>
                             <div class="name">
@@ -107,10 +107,10 @@
                             <div class="categoryItem">
                                 <div class="name">预防保健齿科治疗</div>
 
-                                <div class="progress">
-                                    <span></span>
-                                </div>
-                                <div class="numScale">2,000<span>/2,000</span></div>
+                                    <div class="progress">
+                                        <span :style="ddd"></span>
+                                    </div>
+                                    <div class="numScale">1,000<span>/2,000</span></div>
                             </div>
                             <div class="categoryItem">
                                 <div class="name">基础齿科治疗</div>
@@ -191,8 +191,8 @@
                     </div>
                 </van-swipe-item>
             </van-swipe>
-        </div> -->
-        <div id="wrap" v-if="people==2" class="swiperBox">
+        </div>
+        <!-- <div id="wrap" v-if="people==2" class="swiperBox">
             <div class="swiperItem">
                 <div @click="onChange(1)" class="policy_item">
                     <div class="policy_header">
@@ -299,7 +299,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
         <div class="choiseHospital">
@@ -406,14 +406,14 @@
                 this.people = value
             },
             onChange(value) {
-                let dom = document.getElementsByClassName("swiperItem");
-                let date = this.date;
-                if (value == 1) {
-                    dom[0].style.left = "0";
+                // let dom = document.getElementsByClassName("swiperItem");
+                // let date = this.date;
+                if (value == 0) {
+                    // dom[0].style.left = "0";
                     this.time = "2020-01-01"
                 }
-                if (value == 2) {
-                    dom[0].style.left = "-646px";
+                if (value == 1) {
+                    // dom[0].style.left = "-646px";
                     this.time = "2020-12-12"
                 }
             },
@@ -426,21 +426,21 @@
                     window.location.href = "./home.html"
                 }
             },
-            checkDivScroolTop() {
-                //获取节点
-                var scrollDiv = document.getElementById('wrap');
-                //绑定事件
-                scrollDiv.addEventListener('scroll', function () {
-                    console.log(scrollDiv);
-                });
-            }
+            // checkDivScroolTop() {
+            //     //获取节点
+            //     var scrollDiv = document.getElementById('wrap');
+            //     //绑定事件
+            //     scrollDiv.addEventListener('scroll', function () {
+            //         console.log(scrollDiv);
+            //     });
+            // }
 
 
 
 
         },
         created() {
-            this.checkDivScroolTop();
+            // this.checkDivScroolTop();
 
         }
     });
