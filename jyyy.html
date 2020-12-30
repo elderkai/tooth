@@ -81,7 +81,7 @@
             </div>
         </div>
         <div class="swipe_box">
-            <van-swipe :initial-swipe='0'	 :loop="false" :width="682" v-if="people==2" @change="onChange">
+            <van-swipe :initial-swipe='0' :show-indicators="false"	 :loop="false" :width="682" v-if="people==2" @change="onChange">
                 <van-swipe-item>
                     <div  class="policy_item">
                         <div class="policy_header">
@@ -190,7 +190,7 @@
                         </div>
                     </div>
                 </van-swipe-item>
-                <van-swipe-item>
+                <van-swipe-item style="width:714px;">
                     <div class="policy_item">
                         <div class="policy_header">
                             <p class="text_id">保单编号：P000043537384</p>
