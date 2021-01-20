@@ -1,0 +1,349 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: PingFang;
+  }
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  a:hover,
+  a:visited,
+  a:link,
+  a:active {
+    color: #333;
+  }
+  ul,
+  ol {
+    list-style: none;
+  }
+  img {
+    vartical-align: top;
+    border: none;
+  }
+  .button {
+    border: 0;
+    background-color: none;
+    outline: none;
+    -webkit-appearance: none;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: normal;
+  }
+  input,
+  textarea {
+    outline: none;
+    border: none;
+  }
+  textarea {
+    resize: none;
+    overflow: auto;
+  }
+  i {
+    font-style: normal;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+  input {
+    -moz-appearance: textfield;
+  }
+  .zay_header {
+    width: 100%;
+    padding: 30px 0;
+    background: #fff;
+    border-bottom: 1px solid #c2c2c2;
+  }
+  .zay_header .iconBack_box {
+    position: absolute;
+    left: 30px;
+    top: 18px;
+  }
+  .zay_header .iconBack_box .icon_back {
+    width: 60px;
+    height: 60px;
+  }
+  .zay_header p {
+    height: 36px;
+    font-size: 36px;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: #0F2F3D;
+    line-height: 36px;
+    text-align: center;
+  }
+  .icon_company {
+    margin-left: 32px;
+    margin-top: 40px;
+    display: block;
+  }
+  .icon_login {
+    margin-top: 56px;
+    display: block;
+    margin-left: 50%;
+    transform: translate(-50%,0);
+  }
+  .text_tip {
+    width: 507px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 26px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #999999;
+    line-height: 39px;
+    margin-top: 54px;
+  }
+  .form_login {
+    margin-top: 98px;
+    margin-left: 68px;
+  }
+  .form_login .idnum_Box .left {
+    width: 250px;
+    font-size: 30px;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: #051123;
+    line-height: 30px;
+    display: inline-block;
+  }
+  .form_login .idnum_Box .right {
+    display: inline-block;
+  }
+  .form_login .idnum_Box input {
+    width: 300px;
+    height: 40px;
+    font-size: 30px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #051123;
+  }
+  .form_login .idnum_Box input::placeholder {
+    font-size: 30px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #999999;
+  }
+  .form_login .idnum_Box .login_hr {
+    height: 21px;
+    border: 1px solid #000000;
+    opacity: 0.1;
+    position: relative;
+    bottom: 3px;
+  }
+  .form_PNum {
+    margin-left: 67px;
+  }
+  .form_PNum input {
+    width: 210px;
+    height: 40px;
+    font-size: 30px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #051123;
+  }
+  .form_PNum input::placeholder {
+    font-size: 30px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #999999;
+  }
+  .form_PNum .login_hr {
+    height: 21px;
+    border: 1px solid #000000;
+    opacity: 0.1;
+    position: relative;
+    bottom: 3px;
+  }
+  .form_PNum .left {
+    width: 152px;
+    height: 30px;
+    font-size: 30px;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: #051123;
+    line-height: 30px;
+    padding-right: 32px;
+  }
+  .form_PNum .disable_line {
+    width: 207px;
+    height: 30px;
+    font-size: 30px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #999999;
+    line-height: 25px;
+    opacity: 0.8;
+  }
+  .form_PNum .btn_getCode {
+    margin-left: 52px;
+    width: 170px;
+    height: 60px;
+    background: linear-gradient(161deg,#D7DBE2,#C3D2D7);
+    border-radius: 30px;
+    text-align: center;
+    font-size: 26px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 60px;
+  }
+  .form_PNum .cent_input {
+    margin-left: 34px;
+  }
+  .inBlock {
+    display: inline-block;
+  }
+  .hr_form {
+    height: 1px;
+    background: #EFEFEF;
+    margin: 32px 32px 54px;
+  }
+  .form_vCode {
+    margin-left: 67px;
+  }
+  .form_vCode .left {
+    width: 91px;
+    height: 30px;
+    font-size: 30px;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: #051123;
+    line-height: 30px;
+  }
+  .form_vCode .input_box input {
+    height: 37px;
+    line-height: 30px;
+    font-size: 30px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #051123;
+  }
+  .form_vCode .input_box input::placeholder {
+    font-size: 30px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #999999;
+  }
+  .form_vCode .login_hr {
+    height: 21px;
+    border: 1px solid #000000;
+    opacity: 0.1;
+    position: relative;
+    bottom: 3px;
+    margin: 0 32px;
+  }
+  .btn_login {
+    margin: 0 auto;
+    margin-top: 190px;
+    width: 621px;
+    height: 90px;
+    background: linear-gradient(161deg,#D7DBE2,#C3D2D7);
+    border-radius: 45px;
+    text-align: center;
+    line-height: 90px;
+    font-size: 32px;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: #FFFFFF;
+  }
+  .van-tabbar {
+    height: 100px;
+  }
+  .van-tabbar-item {
+    flex-direction: inherit;
+  }
+  .van-tabbar-item .van-tabbar-item__icon img {
+    width: 50px;
+    height: 50px;
+  }
+  .van-tabbar-item .van-tabbar-item__text {
+    margin-left: 10px;
+    font-family: PingFang;
+    font-weight: 500;
+  }
+  .van-tabbar-item .van-tabbar-item__text span {
+    font-size: 24px;
+  }
+  .box_loading {
+    margin: 218px auto 0;
+    width: 450px;
+    position: relative;
+  }
+  .box_loading .box_bg {
+    width: 450px;
+    height: 450px;
+    box-shadow: 0px 9px 20px 0px rgba(86,203,255,0.1);
+    border-radius: 50%;
+  }
+  .box_loading .searchRotate {
+    position: absolute;
+    left: -4px;
+    top: -4px;
+  }
+  .box_loading .toRotate {
+    animation: rotation 3s linear infinite;
+  }
+  .box_loading .searchItem {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    transition: all .1s linear;
+  }
+  .box_loading .searchItem2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    transition: all .2s linear;
+  }
+  .box_loading .hadSearched {
+    width: 118px;
+    height: 146px;
+  }
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .tipText {
+    margin-top: 183px;
+  }
+  .tipText .title {
+    font-size: 36px;
+    font-family: PingFang;
+    font-weight: bold;
+    color: #051123;
+    line-height: 36px;
+    text-align: center;
+  }
+  .tipText .text {
+    text-align: center;
+    height: 26px;
+    font-size: 28px;
+    font-family: PingFang;
+    font-weight: 500;
+    color: #999999;
+    line-height: 28px;
+    margin-top: 32px;
+  }
+  .van-tabbar-item--active .van-tabbar-item__text {
+    font-weight: bold;
+  }
+  

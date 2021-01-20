@@ -1,0 +1,858 @@
+.header_bg {
+    width: 100%;
+    height: 288px;
+    background: url("../imgs/1.png") 50%;
+    background-size: cover;
+    z-index: 2;
+    position: absolute;
+    top: 87px;
+    padding: 42px 32px;
+  }
+  .level_style {
+    display: inline-block;
+    color: #FFA811;
+    font-size: 34px;
+  }
+  #vue {
+    background: #F1F6F9;
+  }
+  .text_header {
+    display: flex;
+  }
+  .text_header .left {
+    width: 342px;
+    border-right: 1px solid rgba(255,255,255,0.4);
+    display: inline-block;
+  }
+  .text_header .right {
+    display: inline-block;
+    width: 343px;
+    padding-left: 37px;
+  }
+  .text_header .right .bottom {
+    display: flex;
+  }
+  .text_header .right .bottom .text {
+    width: 164px;
+    white-space: nowrap;
+  }
+  .text_header .text_title {
+    height: 28px;
+    font-size: 30px;
+    font-family: PingFang;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 28px;
+    text-shadow: 0px 2px 5px rgba(17,62,127,0.25);
+  }
+  .text_header .bottom {
+    margin-top: 24px;
+  }
+  .text_header .bottom span {
+    font-size: 40px;
+  }
+  .text_header .bottom .text {
+    height: 40px;
+    font-size: 32px;
+    font-family: PingFang;
+    font-weight: bold;
+    color: #FFFFFF;
+    line-height: 39px;
+    text-shadow: 0px 2px 5px rgba(17,62,127,0.25);
+    display: inline-block;
+  }
+  .text_header .bottom .btn_see {
+    display: inline-block;
+    margin-left: 32px;
+    width: 106px;
+    height: 45px;
+    border: 2px solid #FFFFFF;
+    border-radius: 23px;
+    font-size: 26px;
+    font-family: PingFang;
+    font-weight: bold;
+    color: #FFFFFF;
+    line-height: 45px;
+    text-align: center;
+  }
+  .box_grade {
+    margin: 0 auto;
+    margin-top: 153px;
+    width: 686px;
+    height: 206px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px 0px rgba(26,117,205,0.1);
+    border-radius: 20px;
+    padding: 40px 34px;
+    z-index: 99;
+    position: relative;
+  }
+  .box_grade .title {
+    height: 40px;
+    font-size: 32px;
+    font-family: PingFang;
+    font-weight: 800;
+    color: #333333;
+    line-height: 40px;
+    position: relative;
+  }
+  .box_grade .span_choise {
+    border-bottom: 1px solid #777;
+    width: 20px;
+    height: 32px;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin: 2px;
+  }
+  .box_grade .icon_geade {
+    position: absolute;
+    right: 0;
+    top: 3px;
+  }
+  .box_grade .choise_box {
+    margin-top: 26px;
+  }
+  .box_grade .choise_box .choise_item {
+    margin-bottom: 14px;
+  }
+  .box_grade .choise_box .choise_item .right {
+    margin-left: 133px;
+  }
+  .box_grade .choise_box .choise_item .theChoise {
+    width: 240px;
+    height: 26px;
+    font-size: 26px;
+    font-family: PingFang;
+    font-weight: 500;
+    color: #999999;
+    line-height: 26px;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .center_box {
+    width: 686px;
+    height: 869px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px 0px rgba(26,117,205,0.1);
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-top: 32px;
+    padding: 30px 32px;
+    position: relative;
+  }
+  .center_box .toothOne {
+    position: absolute;
+    left: 278px;
+    top: 262px;
+  }
+  .center_box .toothOne .text {
+    width: 180px;
+    height: 26px;
+    font-size: 28px;
+    font-family: PingFang;
+    font-weight: bold;
+    color: #051123;
+    line-height: 39px;
+    margin-bottom: 28px;
+    white-space: nowrap;
+  }
+  .center_box .header_titie {
+    display: flex;
+    justify-content: space-between;
+  }
+  .center_box .header_titie .van-icon {
+    margin-left: 10px;
+    position: relative;
+    top: 1.5px;
+  }
+  .center_box .header_titie .left,
+  .center_box .header_titie .right {
+    height: 26px;
+    font-size: 26px;
+    font-family: PingFang;
+    font-weight: 500;
+    color: #051123;
+    line-height: 26px;
+    position: relative;
+  }
+  .center_box .header_titie .icon_circle {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #CFD5CC;
+    border-radius: 6px;
+    margin-right: 16px;
+    position: relative;
+    top: -4px;
+  }
+  .center_box .header_titie .active {
+    background: #3ECF71;
+  }
+  .center_box .header_titie .icon_bind {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: inline-block;
+    background: url("../imgs/90.png") no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -6px;
+    left: -51px;
+  }
+  .center_box .header_titie .icon_switch {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: inline-block;
+    background: url("../imgs/21.png") no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -6px;
+    left: -51px;
+  }
+  .center_box .center_tip {
+    margin: 0 33px;
+    margin-top: 253px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .center_box .center_tip .left,
+  .center_box .center_tip .right {
+    font-size: 24px;
+    font-family: PingFang;
+    font-weight: 500;
+    color: #C7C7C7;
+    line-height: 24px;
+  }
+  .center_box .tooth_item {
+    position: absolute;
+  }
+  .center_box .tooth_num1 {
+    left: 150px;
+    top: 249px;
+  }
+  .center_box .tooth_num2 {
+    left: 151px;
+    top: 227px;
+  }
+  .center_box .tooth_num3 {
+    left: 158px;
+    top: 204px;
+  }
+  .center_box .tooth_num4 {
+    left: 163px;
+    top: 172px;
+  }
+  .center_box .tooth_num5 {
+    left: 181px;
+    top: 151px;
+  }
+  .center_box .tooth_num6 {
+    left: 197px;
+    top: 125px;
+  }
+  .center_box .tooth_num7 {
+    left: 236px;
+    top: 112px;
+  }
+  .center_box .tooth_num8 {
+    left: 278px;
+    top: 96px;
+  }
+  .center_box .tooth_num9 {
+    left: 338px;
+    top: 96px;
+  }
+  .center_box .tooth_num10 {
+    left: 380px;
+    top: 112px;
+  }
+  .center_box .tooth_num11 {
+    left: 419px;
+    top: 125px;
+  }
+  .center_box .tooth_num12 {
+    left: 435px;
+    top: 151px;
+  }
+  .center_box .tooth_num13 {
+    left: 453px;
+    top: 172px;
+  }
+  .center_box .tooth_num14 {
+    left: 459px;
+    top: 204px;
+  }
+  .center_box .tooth_num15 {
+    left: 466px;
+    top: 227px;
+  }
+  .center_box .tooth_num16 {
+    left: 467px;
+    top: 249px;
+  }
+  .center_box .tooth_num17 {
+    left: 159px;
+    top: 328px;
+  }
+  .center_box .tooth_num18 {
+    left: 163px;
+    top: 361px;
+  }
+  .center_box .tooth_num19 {
+    left: 174px;
+    top: 388px;
+  }
+  .center_box .tooth_num20 {
+    left: 186px;
+    top: 420px;
+  }
+  .center_box .tooth_num21 {
+    left: 199px;
+    top: 444px;
+  }
+  .center_box .tooth_num22 {
+    left: 224px;
+    top: 462px;
+  }
+  .center_box .tooth_num23 {
+    left: 252px;
+    top: 472px;
+  }
+  .center_box .tooth_num24 {
+    left: 290px;
+    top: 474px;
+  }
+  .center_box .tooth_num25 {
+    left: 327px;
+    top: 474px;
+  }
+  .center_box .tooth_num26 {
+    left: 365px;
+    top: 472px;
+  }
+  .center_box .tooth_num27 {
+    left: 393px;
+    top: 462px;
+  }
+  .center_box .tooth_num28 {
+    left: 419px;
+    top: 444px;
+  }
+  .center_box .tooth_num29 {
+    left: 431px;
+    top: 420px;
+  }
+  .center_box .tooth_num30 {
+    left: 443px;
+    top: 388px;
+  }
+  .center_box .tooth_num31 {
+    left: 455px;
+    top: 361px;
+  }
+  .center_box .tooth_num32 {
+    left: 461px;
+    top: 321px;
+  }
+  .center_box .toothTime {
+    position: absolute;
+    left: 265px;
+    top: 224px;
+  }
+  .center_box .toothTime .useTime {
+    width: 157px;
+    height: 73px;
+    font-size: 26px;
+    font-family: PingFang;
+    font-weight: bold;
+    color: #051123;
+    text-align: center;
+    line-height: 36px;
+  }
+  .center_box .toothTime .useTime .huTime {
+    color: #FFA811;
+    font-weight: 500;
+    font-size: 40px;
+  }
+  .center_box .toothTime .minTime {
+    margin-top: 26px;
+    width: 158px;
+    height: 103px;
+    font-size: 26px;
+    font-family: PingFang;
+    font-weight: 500;
+    color: #051123;
+    line-height: 39px;
+    text-align: center;
+  }
+  .center_box .toothTime .minTime .warnTime {
+    color: #FF2F2F;
+    font-size: 26px;
+    font-weight: 500;
+  }
+  .center_box .angle_tooth {
+    position: absolute;
+    left: 228px;
+    top: 220px;
+  }
+  .center_box .angle_tooth .title {
+    width: 229px;
+    height: 30px;
+    font-size: 30px;
+    font-family: PingFang;
+    font-weight: 800;
+    color: #051123;
+    text-align: center;
+    line-height: 30px;
+  }
+  .center_box .angle_tooth .angle_warn {
+    width: 229px;
+    height: 142px;
+    font-size: 26px;
+    font-family: PingFang;
+    font-weight: 500;
+    color: #051123;
+    text-align: center;
+    line-height: 39px;
+    margin-top: 36px;
+  }
+  .center_box .angle_tooth .angle_warn .angle {
+    color: #FF2F2F;
+    font-size: 26px;
+  }
+  .center_box .text_brushTeeth {
+    text-align: center;
+    font-size: 28px;
+    font-family: PingFang;
+    font-weight: bold;
+    color: #666666;
+    line-height: 39px;
+    position: absolute;
+    top: 291px;
+    left: 252px;
+  }
+  .center_box .text_brushTeeth p {
+    font-size: 28px;
+  }
+  .center_box .tooth_time {
+    text-align: center;
+    margin-top: 258px;
+  }
+  .center_box .tooth_time span {
+    font-size: 28px;
+    font-family: PingFang;
+    font-weight: 500;
+    color: #051123;
+    line-height: 28px;
+  }
+  .center_box .tooth_time .icom_reTime {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url("../imgs/white/35.png") no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 3px;
+    margin-right: 16px;
+  }
+  .center_box .tooth_time .icon_addTime {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url("../imgs/white/34.png") no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 3px;
+    margin-left: 16px;
+  }
+  .center_box .btn_tabs {
+    margin-top: 58px;
+    display: flex;
+    padding: 0 30px;
+  }
+  .center_box .btn_tabs .ml60 {
+    margin-left: 60px;
+  }
+  .center_box .btn_tabs .btn_item {
+    display: flex;
+  }
+  .center_box .btn_tabs .btn_item .text {
+    height: 53px;
+    font-size: 24px;
+    font-family: PingFang;
+    font-weight: 500;
+    color: #051123;
+    white-space: nowrap;
+    line-height: 30px;
+    margin-left: 19px;
+    position: relative;
+    top: 10px;
+  }
+  .center_box .btn_tabs .btn_item .active {
+    color: #0091F3;
+  }
+  .center_box .guide_href {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .center_box .guide_href span {
+    width: 108px;
+    height: 28px;
+    font-size: 26px;
+    font-family: PingFang;
+    font-weight: 500;
+    text-decoration: underline;
+    color: #0091F3;
+    line-height: 39px;
+  }
+  .van-popover__action .van-popover__action-text {
+    font-size: 26px;
+    font-family: PingFang;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 26px;
+    text-align: left;
+    width: 160px;
+    padding: 24px 0;
+    display: block;
+  }
+  .van-popover__action {
+    width: 220px;
+    height: 73px;
+  }
+  .van-popover__arrow {
+    border-radius: 14px;
+  }
+  .van-popover--dark .van-popover__content {
+    background-color: #4a4a4a;
+    position: relative;
+    left: -71px;
+  }
+  .van-popover--dark .van-popover__content .van-icon {
+    position: absolute;
+    right: 20px;
+  }
+  .van-popover--dark .van-popover__content .van-icon__image {
+    width: 26px;
+    height: 20px;
+  }
+  .checkedPeople {
+    padding: 35px 31px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .checkedPeople .btn_left {
+    display: flex;
+  }
+  .checkedPeople .btn_left .btn_item {
+    width: 64px;
+    height: 32px;
+    font-size: 32px;
+    font-family: PingFang;
+    font-weight: 500;
+    color: #999999;
+    line-height: 32px;
+    margin-right: 30px;
+  }
+  .checkedPeople .btn_left .active {
+    font-weight: bold;
+    color: #333333;
+    font-size: 36px;
+    width: 75px;
+  }
+  .checkedPeople .total {
+    white-space: nowrap;
+    height: 25px;
+    font-size: 26px;
+    font-family: PingFang;
+    font-weight: 500;
+    color: #666666;
+    line-height: 39px;
+  }
+  .van-swipe .policy_item {
+    width: 650px;
+    margin-left: 32px;
+  }
+  .policy_item {
+    margin: 0 32px;
+    width: 686px;
+    height: 570px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px 0px rgba(26,117,205,0.1);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .policy_item .policy_header {
+    height: 220px;
+    background: linear-gradient(-7deg,rgba(52,121,240,0.9),rgba(4,190,254,0.9));
+    background-size: cover;
+    padding: 40px 33px;
+    position: relative;
+  }
+  .policy_item .policy_header .text_id {
+    font-size: 28px;
+    font-family: PingFang;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 28px;
+    margin-bottom: 32px;
+  }
+  .policy_item .policy_header .name {
+    display: flex;
+    margin-bottom: 32px;
+  }
+  .policy_item .policy_header .name .text_policy {
+    height: 32px;
+    font-size: 32px;
+    font-family: PingFang;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 32px;
+    white-space: nowrap;
+  }
+  .policy_item .policy_header .name .btn_showDetail {
+    width: 106px;
+    height: 36px;
+    background: #FFFFFF;
+    border-radius: 18px 18px 18px 4px;
+    font-size: 20px;
+    font-family: PingFang;
+    font-weight: 500;
+    color: #333333;
+    line-height: 36px;
+    text-align: center;
+    margin-left: 27px;
+  }
+  .policy_item .policy_header .icon_policy {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .policy_item .policy_header .text_Name {
+    white-space: nowrap;
+    height: 28px;
+    font-size: 28px;
+    font-family: PingFang;
+    font-weight: bold;
+    color: #FFFFFF;
+    line-height: 28px;
+  }
+  .policy_item .body_head {
+    margin: 31px 34px 0;
+    display: flex;
+    margin-bottom: 32px;
+    justify-content: space-between;
+  }
+  .policy_item .body_head .policy_name {
+    width: 113px;
+    white-space: nowrap;
+    height: 27px;
+    font-size: 28px;
+    font-family: PingFang;
+    font-weight: 800;
+    color: #333333;
+    line-height: 28px;
+  }
+  .policy_item .body_head .right {
+    white-space: nowrap;
+    height: 24px;
+    font-size: 24px;
+    font-family: 500;
+    font-weight: 500;
+    color: #333333;
+    line-height: 24px;
+  }
+  .policy_item .body_head .right span {
+    color: #999999;
+    font-size: 18px;
+  }
+  .policy_item .categoryItem {
+    margin: 0 34px;
+    display: flex;
+    margin-bottom: 24px;
+  }
+  .policy_item .categoryItem .name {
+    width: 216px;
+    height: 25px;
+    font-size: 26px;
+    font-family: PingFang;
+    font-weight: 500;
+    color: #333333;
+    line-height: 26px;
+  }
+  .policy_item .categoryItem .progress {
+    width: 203px;
+    height: 16px;
+    background: #E9E9E9;
+    border-radius: 8px;
+    position: relative;
+    top: 8px;
+    margin-left: 26px;
+    overflow: hidden;
+  }
+  .policy_item .categoryItem .progress span {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    display: inline-block;
+    background: #FFA811;
+  }
+  .policy_item .categoryItem .numScale {
+    width: 131px;
+    height: 26px;
+    font-size: 26px;
+    font-family: PingFang;
+    font-weight: 500;
+    color: #333333;
+    line-height: 26px;
+    margin-left: 24px;
+  }
+  .policy_item .categoryItem .numScale span {
+    color: #999999;
+    font-size: 20px;
+  }
+  #vue {
+    min-height: 100vh;
+  }
+  .choiseHospital {
+    width: 686px;
+    height: 326px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px 0px rgba(26,117,205,0.1);
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-top: 32px;
+    padding: 40px 30px;
+  }
+  .choiseHospital .header_title {
+    display: flex;
+    justify-content: space-between;
+  }
+  .choiseHospital .header_title .left,
+  .choiseHospital .header_title .right {
+    height: 28px;
+    font-size: 28px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    white-space: nowrap;
+    color: #051123;
+    line-height: 28px;
+  }
+  .choiseHospital .header_title .right {
+    width: 227px;
+  }
+  .choiseHospital .btn_choise {
+    height: 32px;
+    font-size: 32px;
+    font-family: PingFang;
+    font-weight: bold;
+    color: #051123;
+    line-height: 32px;
+  }
+  .choiseHospital .btn_choise .van-icon {
+    margin-left: 14px;
+  }
+  .choiseHospital .title_time {
+    white-space: nowrap;
+    height: 28px;
+    font-size: 28px;
+    font-family: PingFang;
+    font-weight: 500;
+    color: #051123;
+    line-height: 28px;
+    margin-top: 30px;
+  }
+  .choiseHospital .selectTime1 {
+    margin-top: 38px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .choiseHospital .selectTime1 .selectTime {
+    width: 334px;
+    border-bottom: 1px solid #C2C2C2;
+  }
+  .choiseHospital .selectTime1 .selectTime .select {
+    height: 52px;
+    font-size: 32px;
+    font-family: PingFang;
+    font-weight: bold;
+    color: #999999;
+    line-height: 32px;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .choiseHospital .selectTime1 .selectTime .hospital {
+    color: #051123;
+  }
+  .choiseHospital .selectTime1 .selectTime .time {
+    font-size: 28px;
+    font-weight: 500;
+  }
+  .choiseHospital .selectTime1 .sTime {
+    width: 227px;
+  }
+  .choiseHospital .selectTime1 .van-icon {
+    float: right;
+    position: relative;
+    top: 9px;
+  }
+  .choiseHospital .btn_yyue {
+    width: 621px;
+    height: 90px;
+    background: linear-gradient(161deg,#D7DBE2,#C3D2D7);
+    font-size: 32px;
+    font-family: PingFang;
+    font-weight: bold;
+    color: #FFFFFF;
+    line-height: 90px;
+    text-align: center;
+    border-radius: 50px;
+    margin-top: 32px;
+  }
+  .van-swipe__indicators {
+    display: none;
+  }
+  .btn_bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 32px;
+  }
+  .btn_bottom .btn_item {
+    width: 327px;
+    height: 90px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px 0px rgba(26,117,205,0.1);
+    border-radius: 20px;
+    font-size: 26px;
+    font-family: PingFang;
+    font-weight: 500;
+    color: #051123;
+    line-height: 90px;
+    text-align: center;
+  }
+  .btn_bottom .btn_item img {
+    margin-right: 15px;
+    position: relative;
+    top: 8px;
+  }
+  .swiperBox {
+    width: 100%;
+    height: 570px;
+    overflow: hidden;
+  }
+  .swiperBox .swiperItem {
+    width: 1396px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 32px;
+    transition: all .5s linear;
+    position: relative;
+    left: 0;
+  }
+  .swiperBox .swiperItem .policy_item {
+    width: 650px;
+    margin: 0;
+  }
+  

@@ -58,6 +58,10 @@
                 // this.$refs.tooth.style.className="hadSearched searchItem"
             }
         },
+        beforeCreate(){
+            let vueDom =document.getElementById("vue")
+           console.log(vueDom.style.display="block");
+        },
         created() {
             this.searched()
         }

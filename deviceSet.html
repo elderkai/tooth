@@ -163,7 +163,11 @@
                 console.log(value);
                 this.plan=value
             }
-        }
+        },
+        beforeCreate(){
+            let vueDom =document.getElementById("vue")
+           console.log(vueDom.style.display="block");
+        },
     });
 </script>
 </html>
