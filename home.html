@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>招商信诺智爱牙</title>
     <link rel="stylesheet" href="./lib/vant@2.11.2/index.css">
-    <link rel="stylesheet/less" type="text/css" href="./public/css/public.less" />
-    <!-- <link rel="stylesheet" href="./public/css/public.css">
-    <link rel="stylesheet" href="./public/css/home.css"> -->
-    <link rel="stylesheet/less" type="text/css" href="./public/css/home.less" />
-    <script src="./lib/less-3.11.1.min.js"></script>
+    <!-- <link rel="stylesheet/less" type="text/css" href="./public/less/public.less" /> -->
+    <link rel="stylesheet" href="./public/css/public.css">
+    <link rel="stylesheet" href="./public/css/home.css">
+    <!-- <link rel="stylesheet/less" type="text/css" href="./public/less/home.less" /> -->
+    <!-- <script src="./lib/less-3.11.1.min.js"></script> -->
 </head>
 <body>
     <div ref="vue" id="vue">
@@ -20,7 +20,6 @@
             <p>招商信诺智爱牙</p>
         </div>
         <div class="header_bg">
-
             <div class="text_header">
                 <div class="left">
                     <div class="text_title">我的家庭保障</div>
@@ -163,11 +162,15 @@
             </div>
                 <van-calendar v-model="show" :show-confirm="false" @confirm="onConfirm">
                     </van-calendar>
-                    <div v-show="bind" class="brashTimes">
-                        <div class="brashTime select">00:30</div>
-                        <div class="brashTime">08:30</div>
-                        <div class="brashTime">12:30</div>
-                        <div class="brashTime">20:30</div>
+                    <div  v-show="bind"  class="brachTimeBox">
+                        <div class="brashTimes">
+                            <div class="brashTime select">00:30</div>
+                            <div class="brashTime">08:30</div>
+                            <div class="brashTime">12:30</div>
+                            <div class="brashTime">20:30</div>
+                            <div class="brashTime">24:30</div>
+                           
+                        </div>
                     </div>
                 <div class="btn_tabs">
 
@@ -289,7 +292,6 @@
                 }
                 let path=event.target.src.replace(/white/g,'red');
                 event.target.src=path
-                // event.target.style.zIndex='9009'
             },
             select(value){
                 this.actions.forEach((item,index)=>{
@@ -319,18 +321,6 @@
                 this.show = false;
                 this.date = this.formatDate(date);
             },
-            // changeTooth(value){
-            //         let src=[32,30,28,26,24,22,20,18,19,21,23,25,27,29,31,33,16,14,12,10,8,4,6,2,3,5,7,9,11,13,15,17]
-            //         let tooths=document.getElementsByClassName("tooth_item");
-            //         for(var i =0;i<tooths.length;i++){
-            //             if(value==1){
-            //                 tooths[i].src=`./public/imgs/red/${src[i]}.png`
-            //             }else{
-            //                 tooths[i].src=`./public/imgs/yellow/${src[i]}.png`
-            //             }
-            //         }
-            //     // }
-            // },
             bindTooth(){
                 this.bind=true
                 let dom = document.getElementsByClassName("center_box")
@@ -345,16 +335,14 @@
                 this.toothType=type
                 let src=[30,28,26,24,22,20,18,19,21,31,29,27,25,23,14,12,10,8,6,4,2,3,15,13,11,9,7,5]
                 let tooths=document.getElementsByClassName("tooth_item");
-                for(var i =0;i<32;i++){
+                for(var i =0;i<tooths.length;i++){
                         tooths[i].src=`./public/imgs/white/${src[i]}.png`
             }
                 if(type==2||type==3){
-                    for(var i =9;i<16;i++){
+                    for(var i =9;i<14;i++){
                             tooths[i].src=`./public/imgs/yellow/${src[i]}.png`
                 }
             }else{
-                // let src=[32,30,28,26,24,22,20,18,19,21,33,31,29,27,25,23,16,14,12,10,8,4,6,2,3,17,15,13,11,9,7,5]
-                //     let tooths=document.getElementsByClassName("tooth_item");
                     for(var i =0;i<tooths.length;i++){
                             tooths[i].src=`./public/imgs/white/${src[i]}.png`
                 } 
